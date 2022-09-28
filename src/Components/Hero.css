@@ -1,6 +1,5 @@
 .Hero{
     width: 100%;
     max-height: max-content;
-    /* border: 1px solid black; */
     display: flex;
 }

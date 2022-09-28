@@ -1,28 +1,28 @@
 import React from "react";
 import './Header.css';
 import logo from './Images/keep.png'
-import Title from "./Title";
 import { useState } from "react";
 
-function Header(){
+function Header(props){
   const [Tab,setTab] = useState(false);
-    function col() {
-      setTab(true);
-    }
-    function colBlur() {
-      setTab(false);
-    }
+
+function col(){
+  setTab(true);
+}
+function colBlur(){
+  setTab(false)
+}
+const icons = ['refresh','width_full','settings'];
+const profile_icons = ['apps','account_circle']
   return (
     <div className="Navbar">
       <div className="Menubar">
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined" onClick={props.toggleActiveState}>menu</span>
       </div>
       <div className="Nav-logo">
         <img src={logo} alt="Logo"></img>
       </div>
       <div className="Navbar-heading">
-        {/* <Title/> */}
-        {/* {tab === "Notes" && <Notes />} */}
       </div>
       <div className="Navbar-Search">
         <div
@@ -40,13 +40,18 @@ function Header(){
         </div>
       </div>
       <div className="Navbar-more-icons">
-        <span className="material-symbols-outlined">refresh</span>
-        <span className="material-symbols-outlined">width_full</span>
-        <span className="material-symbols-outlined">settings</span>
+        {icons.map(data=>{
+          return(
+            <span className="material-symbols-outlined">{data}</span>
+          )
+        })}
       </div>
       <div className="Navbar-profile">
-        <span className="material-symbols-outlined">apps</span>
-        <span className="material-symbols-outlined">account_circle</span>
+        {profile_icons.map(data=>{
+          return(
+            <span className="material-symbols-outlined">{data}</span>
+          )
+        })}
       </div>
     </div>
   );

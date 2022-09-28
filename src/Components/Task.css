@@ -4,13 +4,12 @@
 .Task-input{
     width: 80%;
     max-height: max-content;
-    /* border: 1px solid red; */
 }
 .Task-01{
     display: flex;
     width: 100%;
     height: 100px;
-    /* border: 1px solid black; */
+    max-height: max-content;
     justify-content: center;
     align-items: center;
 }
@@ -19,11 +18,8 @@
     width: 50%;
     height: 48%;
     align-items: center;
-    /* border: 1px solid red; */
     border-radius:8px;
-    /* box-shadow: 0px 0px 1px 4px rgba(128, 128, 128, 0.489); */
     box-shadow: 0px 1px 11px 0px rgba(139, 139, 139, 0.539);
-        /* box-shadow: inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%); */
 }
 .Task-02 input{
     width: 80%;
@@ -32,5 +28,4 @@
     font-size: 1.1rem;
     border: none;
     outline: none;
-    /* box-shadow: inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%); */
 }
